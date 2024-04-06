@@ -27,26 +27,6 @@ def main():
         print(f"--{word_count} words found in document--")
         for t in t_list:
             print(f"The {t[0]} character appeared {t[1]} times.")
-        print("--End report--")
-        
-        
-
-
-#Need to select for only alphabet characters + order them in a list
-            
-#Use str.isalpha() to deliver boolean check for alphabet chars
-
-#Use dict keys in loop to create list of dicts for each dict unit
-
-#Create print() message using f-strings to present each list value in a text-message
-    
-    #print(file_contents)
-
-    
-    #print(word_count)   
-    
-    
-    #print(character_dict)
-    
+        print("--End report--")    
 
 main()

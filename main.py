@@ -14,15 +14,22 @@ def main():
             for char in word_lower:
                 character_dict[char] += 1    
 #Creates dict for character frequnecy (unsorted)^
-        sorted = []
-        sorting_list = []
-        for key in character_dict:
+        t_list = []
+        for key, value  in character_dict.items():
             if str.isalpha(key) == True:
-                mini_dict = {}
-                mini_dict[key] = character_dict[key]
-                sorting_list.append(mini_dict)
-        sorted = sorting_list.sort()
-        print(sorted)
+                tuple = (key, value)
+                t_list.append(tuple)
+            def sort_on(t_list):
+                return t_list[1]
+            
+        t_list.sort(reverse=True, key=sort_on)
+        print(f"--begin report of ./books/frankenstein.txt--")
+        print(f"--{word_count} words found in document--")
+        for t in t_list:
+            print(f"The {t[0]} character appeared {t[1]} times.")
+        print("--End report--")
+        
+        
 
 
 #Need to select for only alphabet characters + order them in a list
